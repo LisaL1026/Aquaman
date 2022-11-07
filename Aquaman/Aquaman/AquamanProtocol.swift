@@ -41,6 +41,13 @@ protocol AMPageControllerDataSource: class {
     /// - Parameter pageController: AquamanPageViewController
     func menuViewIsFixedAtTop(_ pageController: AquamanPageViewController) -> Bool
     
+    
+    /// ContentScrollView top inset when menu is fixed at top, only used when menuViewIsFixedAtTop is true.
+    ///
+    /// Default is menu height, which will be below the menu.
+    /// - Parameter pageController: AquamanPageViewController
+    func contentTopInsetWhenMenuFixed(_ pageController: AquamanPageViewController) -> CGFloat
+    
     /// The index of the controller displayed by default. You should have menview ready before setting this value
     ///
     /// - Parameter pageController: AquamanPageViewController
